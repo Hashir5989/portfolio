@@ -16,7 +16,7 @@ const page = () => {
     <>
       <HeroSub
         title="Contact Me"
-        description="Let's connect and discuss how I can help bring your next project to life. Get in touch with me for collaborations and opportunities."
+        description="Ready to bring your ideas to life? Let's discuss your project requirements and how my expertise in PHP, Laravel, and full-stack development can help you achieve your goals."
         breadcrumbLinks={breadcrumbLinks}
       />
       <ContactInfo />

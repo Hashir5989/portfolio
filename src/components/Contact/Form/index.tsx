@@ -67,12 +67,12 @@ const ContactForm = () => {
 
   return (
     <>
-      <section className='dark:bg-darkmode md:pb-24 pb-16'>
+      <section id='contact-form' className='dark:bg-darkmode md:pb-24 pb-16'>
         <div className='container mx-auto max-w-6xl px-4'>
           <div className='grid md:grid-cols-12 grid-cols-1 gap-8'>
             <div className='col-span-6'>
               <h2 className='max-w-72 text-[40px] leading-tight font-bold mb-9 text-midnight_text dark:text-white'>
-                Get Online Consultation
+                Start Your Project
               </h2>
               <form onSubmit={handleSubmit} className='flex flex-wrap w-full m-auto justify-between'>
                 <div className='sm:flex gap-3 w-full'>
