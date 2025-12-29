@@ -1,18 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? `/venus-nextjs` : "";
-
 const nextConfig = {
-  output: "export",
-  basePath,
-  assetPrefix: basePath,
   images: {
-    unoptimized: true,
+    domains: ['maps.google.com', 'maps.googleapis.com'],
   },
-  trailingSlash: true,
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+  experimental: {
+    optimizeCss: true,
   },
 };
 
