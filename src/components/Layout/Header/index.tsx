@@ -112,13 +112,13 @@ const Header: React.FC = () => {
         </div>
       </div>
       {navbarOpen && (
-        <div className='fixed top-0 left-0 w-full h-full bg-black/50 z-40' />
+        <div className='mobile-menu-overlay fixed top-0 left-0 w-full h-full bg-black/50 z-40' />
       )}
 
       <div
         ref={mobileMenuRef}
-        className={`lg:hidden fixed top-0 right-0 h-full w-full bg-white dark:bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs ${
-          navbarOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed top-0 right-0 h-full bg-white dark:bg-darkmode shadow-lg transform transition-transform duration-300 max-w-xs mobile-menu ${
+          navbarOpen ? 'translate-x-0 open' : 'translate-x-full'
         } z-50`}>
         <div className='flex items-center justify-between p-4'>
           <h2 className='text-lg font-bold text-midnight_text dark:text-white'>

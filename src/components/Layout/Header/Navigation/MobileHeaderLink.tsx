@@ -12,11 +12,18 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
 
   const path = usePathname();
 
+  // Determine if this link is active
+  const isActive = path === item.href || (path.startsWith("/portfolio") && item.href === "/portfolio");
+
   return (
     <Link href={item.href} className="relative block w-full">
       <button
         onClick={item.submenu ? handleToggle : undefined}
-        className={`flex items-center justify-between w-full py-2 px-3 text-black rounded-md dark:text-grey dark:text-opacity-70 focus:outline-hidden ${path === item.href ? 'bg-primary text-white dark:text-white!' : '  '} ${path.startsWith("/portfolio") && item.href==="/portfolio"?"bg-primary text-white dark:text-white!":null}`}
+        className={`flex items-center justify-between w-full py-2 px-3 rounded-md focus:outline-none transition-colors ${
+          isActive
+            ? 'bg-primary text-white dark:text-white'
+            : 'text-black dark:text-grey dark:text-opacity-70 hover:bg-gray-100 dark:hover:bg-darklight'
+        }`}
       >
         {item.label}
         {item.submenu && (
@@ -26,9 +33,17 @@ const MobileHeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
         )}
       </button>
       {submenuOpen && item.submenu && (
-        <div className="bg-white p-2 w-full">
+        <div className="bg-white dark:bg-darklight p-2 w-full">
           {item.submenu.map((subItem, index) => (
-            <Link key={index} href={subItem.href} className="block py-2 text-gray-500 hover:bg-gray-200">
+            <Link
+              key={index}
+              href={subItem.href}
+              className={`block py-2 px-2 rounded text-sm transition-colors ${
+                path === subItem.href
+                  ? 'bg-primary text-white'
+                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-midnight_text'
+              }`}
+            >
               {subItem.label}
             </Link>
           ))}
