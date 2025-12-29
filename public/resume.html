@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdulla Hashir Ali - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .header h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 0.9rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0f766e;
+            border-bottom: 2px solid #14b8a6;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .summary {
+            background: #f0fdfa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #14b8a6;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 18px;
+            padding-left: 20px;
+            border-left: 3px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: #14b8a6;
+            border-radius: 50%;
+        }
+        
+        .job-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: 500;
+            color: #0f766e;
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            font-size: 0.85rem;
+            color: #718096;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #4a5568;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .skill-category h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .projects-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .project-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .project-tech {
+            font-size: 0.85rem;
+            color: #14b8a6;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            background: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                max-width: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Abdulla Hashir Ali</h1>
+            <h2>Senior PHP / Laravel Developer</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 hashirbinali@gmail.com
+                </div>
+                <div class="contact-item">
+                    📱 +91 77368 81988
+                </div>
+                <div class="contact-item">
+                    📍 Thrissur, Kerala, India
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Career Objective -->
+            <div class="section">
+                <h2 class="section-title">Career Objective</h2>
+                <div class="summary">
+                    Senior PHP / Laravel Developer with 5 years of experience in full-stack development, specializing in scalable web applications, APIs, and ERP solutions. Seeking to contribute strong technical expertise to a growth-oriented organization.
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Senior PHP Developer</div>
+                    <div class="company">Poornam Info Vision Pvt Ltd, Kochi</div>
+                    <div class="period">December 2024 – Present</div>
+                    <div class="description">
+                        • Developing ERP modules, dashboards, and tools using Laravel, MySQL, and GraphQL<br>
+                        • Building REST & GraphQL APIs for integrations<br>
+                        • Optimizing database queries and backend performance
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">PHP Developer</div>
+                    <div class="company">Global Establishment Pvt Ltd, Ernakulam</div>
+                    <div class="period">June 2023 – November 2024</div>
+                    <div class="description">
+                        • Developed ERP modules using Laravel & MySQL<br>
+                        • Handled backend enhancements and API integrations
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">PHP Developer</div>
+                    <div class="company">ImmplyCloud Pvt Ltd, Pune</div>
+                    <div class="period">May 2022 – May 2023</div>
+                    <div class="description">
+                        • Built Laravel modules with Vue.js / Nuxt.js frontend<br>
+                        • Database migrations, deployments, and maintenance<br>
+                        • Enhanced Drupal-based components
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Associate Software Engineer</div>
+                    <div class="company">Digitalmesh Softech Pvt Ltd, Ernakulam</div>
+                    <div class="period">December 2020 – April 2022</div>
+                    <div class="description">
+                        • Developed PHP and Angular-based business applications<br>
+                        • Front-end coding, MySQL integrations, and performance optimization
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="section">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <div class="project-title">ERP System</div>
+                        <div class="project-tech">Laravel, Vue/Nuxt, MySQL, REST & GraphQL</div>
+                        <div class="description">
+                            Inventory, HR, finance, and reporting automation with role-based access for multi-department operations.
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">School Management System</div>
+                        <div class="project-tech">Laravel, MySQL, REST API</div>
+                        <div class="description">
+                            Comprehensive system for attendance, fees, exams, and timetable management with admin, teacher, and parent access control.
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-title">E-Commerce Platform</div>
+                        <div class="project-tech">Laravel, Nuxt.js, MySQL</div>
+                        <div class="description">
+                            Full-featured platform with cart, checkout, payments, and order tracking. Improved purchase flow and performance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="job-title">Bachelor of Computer Science</div>
+                    <div class="company">Mother Arts & Science College, Thrissur</div>
+                    <div class="period">2019</div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">REST API</span>
+                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Nuxt.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">API Testing</span>
+                            <span class="skill-tag">Debugging</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Domains</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ERP Systems</span>
+                            <span class="skill-tag">E-Commerce</span>
+                            <span class="skill-tag">School Management</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Drupal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="section">
+                <h2 class="section-title">Soft Skills</h2>
+                <div class="skill-tags">
+                    <span class="skill-tag">Communication Skills</span>
+                    <span class="skill-tag">Time Management</span>
+                    <span class="skill-tag">Problem Solving</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Abdulla Hashir Ali. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
