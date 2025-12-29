@@ -4,9 +4,7 @@ const nextConfig = {
   images: {
     domains: ['maps.google.com', 'maps.googleapis.com'],
   },
-  experimental: {
-    optimizeCss: true,
-  },
+  // Removed basePath configuration that was causing CSS loading issues
 };
 
 export default nextConfig;
