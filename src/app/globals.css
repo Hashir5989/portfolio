@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Test styles to ensure CSS is loading */
 body {
   font-family: 'Inter', sans-serif;
