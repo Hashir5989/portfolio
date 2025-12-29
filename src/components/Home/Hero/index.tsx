@@ -43,8 +43,8 @@ const Hero = () => {
           <div className='flex items-center mt-12 gap-4'>
             <div className='flex items-center'>
               <Image
-                src={getImgPath('/images/hero/hero-profile-1.jpg')}
-                alt='hero-image'
+                src={getImgPath('/images/hero/profile-photo.jpg')}
+                alt='Abdulla Hashir Ali - Profile Photo'
                 width={40}
                 height={40}
                 quality={100}
