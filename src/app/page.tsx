@@ -6,7 +6,6 @@ import Progresswork from '@/components/Home/WorkProgress';
 import Services from '@/components/Home/Services';
 import Skills from '@/components/Home/Skills';
 import Portfolio from '@/components/SharedComponent/portfollio'
-import Testimonial from '@/components/SharedComponent/Testimonial'
 import Contactform from '@/components/Home/Contact';
 export const metadata: Metadata = {
   title: "Abdulla Hashir Ali - Senior PHP/Laravel Developer Portfolio",
@@ -22,7 +21,6 @@ export default function Home() {
       <Services />
       <Skills />
       <Portfolio />
-      <Testimonial />
       <Contactform />
     </main>
   )

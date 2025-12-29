@@ -5,7 +5,6 @@ export const menuItems = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Portfolio", href: "#portfolio" },
-    { name: "Testimonials", href: "#testimonials" },
 ];
 
 export const count = [
